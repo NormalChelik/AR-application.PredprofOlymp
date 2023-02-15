@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour
     private ProgrammManager ProgrammManager;
     private DataBase db;
 
-    void Start()
+    private void Start()
     {
         ProgrammManager = FindObjectOfType<ProgrammManager>();
         db = GetComponent<DataBase>();
@@ -36,7 +36,7 @@ public class UIManager : MonoBehaviour
         listVerbButton.onClick.AddListener(listButtonActive);
     }
 
-    void listButtonActive()
+    private void listButtonActive()
     {
         scrollView.SetActive(!scrollView.activeSelf);
 
@@ -57,7 +57,7 @@ public class UIManager : MonoBehaviour
         }
     }
     //удаление моделей со сцены
-    void DestroyModels()
+    private void DestroyModels()
     {
         Transform contentModels = ProgrammManager.bundleParent;
         for (int i = 0; i < contentModels.transform.childCount; i++)
@@ -65,7 +65,7 @@ public class UIManager : MonoBehaviour
     }
     
     //создание модели на сцене
-    void SpawnObjectFunction()
+    private void SpawnObjectFunction()
     {
         listVerbButton.interactable = false;
 

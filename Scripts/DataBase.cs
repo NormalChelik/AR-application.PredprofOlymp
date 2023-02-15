@@ -33,7 +33,7 @@ public class DataBase : MonoBehaviour
     private FirebaseStorage storage;
     private StorageReference storageReference;
 
-    void Start()
+    private void Start()
     {
         ProgrammManager = FindObjectOfType<ProgrammManager>();
 
