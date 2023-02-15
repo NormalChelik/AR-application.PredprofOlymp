@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//экран загрузки
 public class LoadingBar : MonoBehaviour
 {
     public int SceneID;
@@ -13,6 +14,7 @@ public class LoadingBar : MonoBehaviour
     {
         StartCoroutine(AsyncLoad());
     }
+    //загрузка сцены
     IEnumerator AsyncLoad()
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(SceneID);

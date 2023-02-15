@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//использование всех Update в одном
 public class MonoCache : MonoBehaviour
 {
     public static List<MonoCache> allUpdate = new List<MonoCache>(10001);

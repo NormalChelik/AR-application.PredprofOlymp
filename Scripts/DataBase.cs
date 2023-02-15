@@ -44,6 +44,7 @@ public class DataBase : MonoBehaviour
         StartCoroutine(LoadData());
     }
 
+    //загрузка assetBundle
     public void GetBundleObject(string assetName)
     {
         assetName = assetName.Replace(" ", "_");
@@ -64,6 +65,7 @@ public class DataBase : MonoBehaviour
         });
     }
 
+    //загрузка глаголов из БД и добавление их в список
     public IEnumerator LoadData()
     {
         var verbs = dbRef.Child("buttons").Child("verbs").GetValueAsync();
@@ -87,7 +89,7 @@ public class DataBase : MonoBehaviour
             }
         }
     }
-
+    //загрузка и распаковка assetBundle
     IEnumerator Load3DModels(string assetName)
     {
 
@@ -96,6 +98,7 @@ public class DataBase : MonoBehaviour
             var operation = www.SendWebRequest();
 
                 loadingBarModel.gameObject.SetActive(true);
+                //визуализация загрузки модели
                 while (!operation.isDone)
                 {
                     textProgress.text = "загрузка модели";

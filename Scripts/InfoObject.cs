@@ -27,6 +27,7 @@ public class InfoObject : MonoCache
                 //Наша информация об объекте выскакивает из объекта
                 SectionInfo.localScale = Vector3.Lerp(SectionInfo.localScale, desiredScale, Time.deltaTime * speed);
 
+                //инфопанель двигается за камерой 
                 InfoParent.transform.LookAt(transform);
             }
         }
@@ -50,6 +51,7 @@ public class InfoObject : MonoCache
         }
     }
 
+    //добавление всех инфопанелей в список
     public void FindInfoObjects(Transform bundleParent)
     {
         infos.Clear();

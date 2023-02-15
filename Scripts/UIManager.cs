@@ -56,14 +56,15 @@ public class UIManager : MonoBehaviour
             }
         }
     }
-
+    //удаление моделей со сцены
     void DestroyModels()
     {
         Transform contentModels = ProgrammManager.bundleParent;
         for (int i = 0; i < contentModels.transform.childCount; i++)
             Destroy(contentModels.transform.GetChild(i).gameObject);
     }
-
+    
+    //создание модели на сцене
     void SpawnObjectFunction()
     {
         listVerbButton.interactable = false;

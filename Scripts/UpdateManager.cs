@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//добавление всех Update в список
 public class UpdateManager : MonoBehaviour
 {
     private void Update()

@@ -35,10 +35,12 @@ public class UIMenuManager : MonoBehaviour
         else AudioSlider.value = 0.8f;
     }
 
+    //настройка громкости музыки
     private void Update()
     {
         audioSource.volume = AudioSlider.value;
     }
+    //активация настроек
     private void SettingsButtonActive()
     {
         StartButton.gameObject.SetActive(!StartButton.gameObject.activeSelf);
@@ -48,7 +50,7 @@ public class UIMenuManager : MonoBehaviour
     {
         LoadingBar.SetActive(true);
     }
-
+    //сохранение настроек громкости
     public void SaveAudioSettings()
     {
         PlayerPrefs.SetFloat("musicValue", AudioSlider.value);
