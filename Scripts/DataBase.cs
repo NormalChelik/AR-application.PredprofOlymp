@@ -39,7 +39,7 @@ public class DataBase : MonoBehaviour
 
         dbRef = FirebaseDatabase.DefaultInstance.RootReference;
         storage = FirebaseStorage.DefaultInstance;
-        storageReference = storage.GetReferenceFromUrl("gs://frazovy-glagol.appspot.com/3d_models/");
+        storageReference = storage.GetReferenceFromUrl("ссылка на папку, где лежат модели, в StorageFirebase");
 
         StartCoroutine(LoadData());
     }
