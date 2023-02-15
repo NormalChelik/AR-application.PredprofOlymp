@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+п»їusing System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -31,7 +31,7 @@ public class UIManager : MonoBehaviour
         ProgrammManager = FindObjectOfType<ProgrammManager>();
         db = GetComponent<DataBase>();
 
-        //Действия для кнопок
+        //Р”РµР№СЃС‚РІРёСЏ РґР»СЏ РєРЅРѕРїРѕРє
         destroyButton.onClick.AddListener(DestroyModels);
         listVerbButton.onClick.AddListener(listButtonActive);
     }
@@ -40,7 +40,7 @@ public class UIManager : MonoBehaviour
     {
         scrollView.SetActive(!scrollView.activeSelf);
 
-        //Создание кнопок 
+        //РЎРѕР·РґР°РЅРёРµ РєРЅРѕРїРѕРє 
         if (listButtonSpawn.Count == 0)
         {
             for (int i = 0; i < db.verbsStr.Count; i++)

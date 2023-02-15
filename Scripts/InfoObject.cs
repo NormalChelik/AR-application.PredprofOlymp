@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+п»їusing System.Collections.Generic;
 using UnityEngine;
 
 
@@ -24,7 +24,7 @@ public class InfoObject : MonoCache
             if (go.CompareTag("models"))
             {
                 OpenInfo(go);
-                //Наша информация об объекте выскакивает из объекта
+                //РќР°С€Р° РёРЅС„РѕСЂРјР°С†РёСЏ РѕР± РѕР±СЉРµРєС‚Рµ РІС‹СЃРєР°РєРёРІР°РµС‚ РёР· РѕР±СЉРµРєС‚Р°
                 SectionInfo.localScale = Vector3.Lerp(SectionInfo.localScale, desiredScale, Time.deltaTime * speed);
 
                 InfoParent.transform.LookAt(transform);
@@ -36,7 +36,7 @@ public class InfoObject : MonoCache
         }
     }
 
-    //открытие панели с информацией
+    //РѕС‚РєСЂС‹С‚РёРµ РїР°РЅРµР»Рё СЃ РёРЅС„РѕСЂРјР°С†РёРµР№
     private void OpenInfo(GameObject desiredInfo)
     {
         foreach (GameObject info in infos)

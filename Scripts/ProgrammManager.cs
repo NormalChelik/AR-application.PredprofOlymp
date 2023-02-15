@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+п»їusing System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -8,7 +8,7 @@ public class ProgrammManager : MonoCache
 {
     [Header("Marker on plane")]
     [SerializeField]
-    private GameObject planeMarker; //маркер
+    private GameObject planeMarker; //РјР°СЂРєРµСЂ
     [Header("Object spawn")]
     [SerializeField]
     public GameObject spawnObject;
@@ -43,22 +43,22 @@ public class ProgrammManager : MonoCache
 
     private void Marker()
     {
-        //создание луча
+        //СЃРѕР·РґР°РЅРёРµ Р»СѓС‡Р°
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
-        //откуда пускается луч, куда записываем информацию от луча, фиксируем плоскость
+        //РѕС‚РєСѓРґР° РїСѓСЃРєР°РµС‚СЃСЏ Р»СѓС‡, РєСѓРґР° Р·Р°РїРёСЃС‹РІР°РµРј РёРЅС„РѕСЂРјР°С†РёСЋ РѕС‚ Р»СѓС‡Р°, С„РёРєСЃРёСЂСѓРµРј РїР»РѕСЃРєРѕСЃС‚СЊ
         aRRaycastManager.Raycast(new Vector2(Screen.width / 2, Screen.height / 2), hits, TrackableType.Planes);
 
         if (hits.Count > 0)
         {
-            //ставим маркер туда, где упал луч на плоскости
+            //СЃС‚Р°РІРёРј РјР°СЂРєРµСЂ С‚СѓРґР°, РіРґРµ СѓРїР°Р» Р»СѓС‡ РЅР° РїР»РѕСЃРєРѕСЃС‚Рё
             planeMarker.transform.position = hits[0].pose.position;
             planeMarker.SetActive(true);
         }
 
-        //одно нажатие
+        //РѕРґРЅРѕ РЅР°Р¶Р°С‚РёРµ
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && spawnObject != null)
         {
-            //создание объекта на сцене
+            //СЃРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р° РЅР° СЃС†РµРЅРµ
             Instantiate(spawnObject, hits[0].pose.position, spawnObject.transform.rotation, bundleParent);
             objectIsSelected = false;
             planeMarker.SetActive(false);
@@ -67,7 +67,7 @@ public class ProgrammManager : MonoCache
         }
         if (Input.GetKeyDown(KeyCode.E) && spawnObject != null)
         {
-            //создание объекта на сцене
+            //СЃРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р° РЅР° СЃС†РµРЅРµ
             Instantiate(spawnObject, bundleParent);
             objectIsSelected = false;
             planeMarker.SetActive(false);

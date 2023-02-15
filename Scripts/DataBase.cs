@@ -1,4 +1,4 @@
-using System.Collections;
+п»їusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Firebase.Database;
@@ -98,7 +98,7 @@ public class DataBase : MonoBehaviour
                 loadingBarModel.gameObject.SetActive(true);
                 while (!operation.isDone)
                 {
-                    textProgress.text = "загрузка модели";
+                    textProgress.text = "Р·Р°РіСЂСѓР·РєР° РјРѕРґРµР»Рё";
                     loadingBarModel.size += 0.05f;
                     yield return null;
                 }
