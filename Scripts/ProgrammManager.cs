@@ -65,15 +65,6 @@ public class ProgrammManager : MonoCache
             infoObject.FindInfoObjects(bundleParent);
             uiManager.listVerbButton.interactable = true;
         }
-        if (Input.GetKeyDown(KeyCode.E) && spawnObject != null)
-        {
-            //создание объекта на сцене
-            Instantiate(spawnObject, bundleParent);
-            objectIsSelected = false;
-            planeMarker.SetActive(false);
-            infoObject.FindInfoObjects(bundleParent);
-            uiManager.listVerbButton.interactable = true;
-        }
     }
 
 }
