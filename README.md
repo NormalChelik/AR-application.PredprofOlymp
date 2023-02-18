@@ -68,7 +68,7 @@ private void DestroyModels()
       Destroy(contentModels.transform.GetChild(i).gameObject);//удаление со сцены всех детей(моделей) родительского объекта
 }
 ``` 
-4. Скрипт [DataBase](https://github.com/NormalChelik/AR-application.PredprofOlymp/blob/main/Scripts/DataBase.cs) отвечает за загрузку слов из **FireBase(Realtime Database)** и загрузку, распаковку 3D моделей из **FireBase(Storage)**. Нужно будет создать и настроить проект на [FireBase](https://firebase.google.com) и указать все нужные названия и ссылки в этих строчка:
+4. Скрипт [DataBase](https://github.com/NormalChelik/AR-application.PredprofOlymp/blob/main/Scripts/DataBase.cs) отвечает за загрузку слов из **FireBase(Realtime Database)** и загрузку, распаковку 3D моделей из **FireBase(Storage)**. Нужно будет создать и настроить проект на [FireBase](https://firebase.google.com) и указать все нужные названия и ссылки в этих строчках:
 ```C#
 storageReference = storage.GetReferenceFromUrl("ссылка на папку, где лежат модели, в StorageFirebase");
 . . .
